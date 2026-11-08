@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+}
+
+.font-game {
+  font-family: 'Fredoka', 'Outfit', cursive, sans-serif;
+}
+
+/* Comic cartoon text outline */
+.text-stroke-comic {
+  -webkit-text-stroke: 4px #1e293b;
+  paint-order: stroke fill;
+}
+
+.text-stroke-comic-sm {
+  -webkit-text-stroke: 2px #1e293b;
+  paint-order: stroke fill;
+}
+
+.text-stroke-white {
+  -webkit-text-stroke: 2px #ffffff;
+  paint-order: stroke fill;
+}
+
+/* Wood texture gradient helper */
+.wood-panel {
+  background: linear-gradient(180deg, #d97706 0%, #b45309 30%, #92400e 70%, #78350f 100%);
+  box-shadow: 0 6px 0 #451a03, 0 10px 20px rgba(0, 0, 0, 0.25);
+  border: 4px solid #fef3c7;
+}
+
+.wood-panel-inner {
+  background: linear-gradient(180deg, #fef3c7 0%, #fde68a 100%);
+  box-shadow: inset 0 2px 6px rgba(120, 53, 15, 0.4);
+}
+
+.blue-team-card {
+  background: linear-gradient(180deg, #3b82f6 0%, #1d4ed8 100%);
+  box-shadow: 0 4px 0 #1e3a8a, 0 6px 12px rgba(29, 78, 216, 0.3);
+  border: 3px solid #93c5fd;
+}
+
+.red-team-card {
+  background: linear-gradient(180deg, #ef4444 0%, #b91c1c 100%);
+  box-shadow: 0 4px 0 #7f1d1d, 0 6px 12px rgba(185, 28, 28, 0.3);
+  border: 3px solid #fca5a5;
+}
+
+/* 3D button press feel */
+.btn-3d-blue {
+  background: linear-gradient(180deg, #38bdf8 0%, #0284c7 100%);
+  box-shadow: 0 5px 0 #0369a1, 0 8px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.05s ease, box-shadow 0.05s ease;
+}
+.btn-3d-blue:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #0369a1, 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-3d-red {
+  background: linear-gradient(180deg, #f87171 0%, #dc2626 100%);
+  box-shadow: 0 5px 0 #991b1b, 0 8px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.05s ease, box-shadow 0.05s ease;
+}
+.btn-3d-red:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #991b1b, 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-3d-green {
+  background: linear-gradient(180deg, #4ade80 0%, #16a34a 100%);
+  box-shadow: 0 5px 0 #15803d, 0 8px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.05s ease, box-shadow 0.05s ease;
+}
+.btn-3d-green:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #15803d, 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-3d-yellow {
+  background: linear-gradient(180deg, #fde047 0%, #eab308 100%);
+  box-shadow: 0 5px 0 #a16207, 0 8px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.05s ease, box-shadow 0.05s ease;
+}
+.btn-3d-yellow:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #a16207, 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes ropePullLeft {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-8px) rotate(-0.5deg); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes ropePullRight {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(8px) rotate(0.5deg); }
+  100% { transform: translateX(0); }
+}
+
+.animate-pull-left {
+  animation: ropePullLeft 0.3s ease-out;
+}
+
+.animate-pull-right {
+  animation: ropePullRight 0.3s ease-out;
+}
+
+@keyframes floatUpFade {
+  0% { transform: translateY(0) scale(0.9); opacity: 1; }
+  100% { transform: translateY(-40px) scale(1.2); opacity: 0; }
+}
+
+.animate-float-text {
+  animation: floatUpFade 0.9s forwards ease-out;
+}

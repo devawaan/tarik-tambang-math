@@ -1,0 +1,6 @@
+{
+  "name": "Tarik Tambang Matematika - Math Tug of War",
+  "description": "Game tarik tambang perhitungan matematika 2D seru dengan kontrol cepat, multiplayer lokal 1 perangkat, tantangan waktu, papan skor global, kustomisasi karakter, dan statistik perkembangan harian.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
